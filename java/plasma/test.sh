@@ -31,7 +31,7 @@ pushd ../../cpp
       mkdir release
     fi
     pushd release
-        cmake -DCMAKE_BUILD_TYPE=Release \
+        sudo cmake -DCMAKE_BUILD_TYPE=Release \
             -DCMAKE_C_FLAGS="-g -O3" \
             -DCMAKE_CXX_FLAGS="-g -O3" \
             -DARROW_BUILD_TESTS=off \
@@ -47,7 +47,7 @@ pushd ../../cpp
             -DARROW_WITH_ZSTD=off \
             -DARROW_PLASMA_JAVA_CLIENT=on \
             ..
-        make VERBOSE=1 -j$PARALLEL
+        sudo make VERBOSE=1 -j$PARALLEL
     popd
 popd
 
