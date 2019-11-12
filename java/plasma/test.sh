@@ -46,6 +46,7 @@ pushd ../../cpp
             -DARROW_WITH_ZLIB=off \
             -DARROW_WITH_ZSTD=off \
             -DARROW_PLASMA_JAVA_CLIENT=on \
+            -DPYTHON_EXECUTABLE=$CONDA_PREFIX/bin/python \
             ..
         sudo make VERBOSE=1 -j$PARALLEL
     popd
